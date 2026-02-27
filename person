@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Person {
+
+    private String firstName;
+    private String lastName;
+    private String gender;
+
+    public Person(String firstName, String lastName, String gender) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+    }
+
+    @Override
+    public String toString() {
+        return firstName + " " + lastName + " (" + gender + ")";
+    }
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter first name: ");
+        String firstName = scanner.nextLine();
+
+        System.out.print("Enter last name: ");
+        String lastName = scanner.nextLine();
+
+        System.out.print("Enter gender: ");
+        String gender = scanner.nextLine();
+
+        Person p = new Person(firstName, lastName, gender);
+
+        System.out.println("\nCreated Person:");
+        System.out.println(p);
+
+        scanner.close();
+    }
+}
